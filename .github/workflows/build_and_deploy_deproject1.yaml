@@ -45,11 +45,17 @@ jobs:
         run: pip install -r requirements.txt
       
 
-      - name: Setup snowcli
-        uses: Snowflake-Labs/snowflake-cli-action@v1
+      #- name: Setup snowcli
+      #  uses: Snowflake-Labs/snowflake-cli-action@v1
+      #  with:
+      #    cli-version: "latest"
+      #    default-config-file-path: "config.toml"
+
+      - name: Setup Snowflake CLI
+        uses: snowflake/snowflake-cli-action@v1
         with:
           cli-version: "latest"
-          default-config-file-path: "config.toml"
+          default-config-file-path: "config.toml"    
 
       - name: copy sql file
         working-directory: DE_PROJECT_1/app
