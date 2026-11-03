@@ -52,7 +52,7 @@ jobs:
       #    default-config-file-path: "config.toml"
 
       - name: Setup Snowflake CLI
-        uses: snowflake/snowflake-cli-action@v1
+        uses: snowflake/snowflake-cli-action@v2.1.0
         with:
           cli-version: "latest"
           default-config-file-path: "config.toml"    
